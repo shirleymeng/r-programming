@@ -5,8 +5,8 @@ makeCacheMatrix <- function(x = matrix()) {
                 ivsmatrix <<- NULL
         }
         get <- function() x
-        setivsmatrix <- function(solve) ivsmatrix  <<- solve(x)
-        getivsmatrix <- function() ivsmatrix 
+        setivsmatrix <- function(solve) m <<- solve(x)
+        getivsmatrix <- function() m
         list(set = set, get = get,
              setivsmatrix = setivsmatrix,
              getivsmatrix = getivsmatrix)
