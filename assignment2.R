@@ -1,3 +1,10 @@
+# makeCacheMatrix returns a functions lists
+#	input: a matrix
+#	output: a list of 4 functions:
+#		get(): get the matrix
+#		set(): set the matrix
+#		setivsmatrix(): convert the input matrix into a inverse matrix
+#		getivsmatrix(): get the inversed matrix				     		
 makeCacheMatrix <- function(x = matrix()) {
         ivsmatrix <- NULL
         set <- function(y) {
@@ -13,7 +20,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+# cacheSolve function returns the inverse matrix
+# 	input: a function list created from makeCacheMatrix
+#	output: inversed matrix either get from cache
+#		  or generated from the input object
 
 cacheSolve <- function(x) {
         ## Return a matrix that is the inverse of 'x'
